@@ -1,4 +1,8 @@
 #include "events.h"
+events_class::events_class()
+{
+
+}
 void events_class::event_loop()
 {
     while(SDL_PollEvent(&event)){
