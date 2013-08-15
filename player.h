@@ -12,6 +12,7 @@ class player_class{
         vec2 velocity;
     private:
         void move();
+        void on_screen_check();
     public:
         player_class();
         //player_class(events_class* new_events);

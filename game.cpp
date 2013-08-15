@@ -7,7 +7,7 @@ game_class::game_class()
     events->set_game(this);
     map=new map_class;
     player=new player_class;
-    std::cout<<player<<"\n";
+    //std::cout<<player<<"\n";
     running=true;
 }
 game_class::~game_class()
@@ -35,4 +35,8 @@ events_class* game_class::get_events()
 player_class* game_class::get_player()
 {
     return player;
+}
+void game_class::update()
+{
+    player->update();
 }

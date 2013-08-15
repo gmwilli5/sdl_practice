@@ -7,5 +7,6 @@ int main()
     while(g.get_running()){
         g.get_events()->event_loop();
         g.render();
+        g.update();
     }
 }

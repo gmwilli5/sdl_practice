@@ -23,5 +23,6 @@ class game_class{
         bool get_running();
         events_class* get_events();
         player_class* get_player();
+        void update();
 };
 #endif // GAME_H_INCLUDED
