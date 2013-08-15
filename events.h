@@ -1,7 +1,7 @@
 #ifndef EVENTS_H_INCLUDED
 #define EVENTS_H_INCLUDED
 #include "SDL/SDL.h"
-//#include "game.h"
+#include "game.h"
 class game_class;
 class events_class{
     private:
