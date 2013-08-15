@@ -15,3 +15,7 @@ void events_class::events(SDL_Event* e)
         SDL_Quit();
     }
 }
+void events_class::set_game(game_class* new_game)
+{
+    game=new_game;
+}
