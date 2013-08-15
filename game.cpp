@@ -3,6 +3,7 @@ game_class::game_class()
 {
     window=new window_class(600,700,32);
     events=new events_class;
+    map=new map_class;
     running=true;
 }
 game_class::~game_class()
@@ -15,7 +16,8 @@ SDL_Surface* game_class::get_screen()
 }
 void game_class::render()
 {
-
+    map->render(window->get_screen());
+    SDL_Flip(window->get_screen());
 }
 bool game_class::get_running()
 {

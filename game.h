@@ -3,11 +3,13 @@
 #include "SDL/SDL.h"
 #include "window.h"
 #include "events.h"
+#include "map.h"
 class game_class{
     private:
         SDL_Surface* screen;
         window_class* window;
         events_class* events;
+        map_class* map;
         bool running;
     public:
         game_class();
