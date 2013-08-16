@@ -4,6 +4,7 @@
 #include "structs.h"
 #include "events.h"
 class events_class;
+class physics_class;
 class player_class{
     private:
         SDL_Surface* tile;
@@ -11,6 +12,7 @@ class player_class{
         vec2 position;
         vec2 velocity;
         vec2 acceleration;
+        physics_class* physics;
     private:
         void move();
         void accelerate();
@@ -18,6 +20,7 @@ class player_class{
         void update_physics();
     public:
         player_class();
+        ~player_class();
         //player_class(events_class* new_events);
         void update();
         void events(SDL_Event event);

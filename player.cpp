@@ -4,12 +4,18 @@
 player_class::player_class()
 {
     tile=SDL_LoadBMP("red.bmp");
+    physics=new physics_class;
     position.x=0;
     position.y=0;
     velocity.x=0;
     velocity.y=0;
     acceleration.x=0;
     acceleration.y=0;
+}
+player_class::~player_class()
+{
+    SDL_FreeSurface(tile);
+    delete physics;
 }
 /*player_class::player_class(events_class* new_events)
 {
@@ -23,6 +29,8 @@ player_class::player_class()
 void player_class::update()
 {
     on_screen_check();
+    update_physics();
+    accelerate();
     move();
 }
 void player_class::move()
@@ -76,5 +84,9 @@ void player_class::on_screen_check()
 }
 void player_class::update_physics()
 {
-
+    physics->apply_gravity(&acceleration.x);
+}
+void player_class::accelerate()
+{
+    acceleration=dot_product(acceleration,velocity);
 }
