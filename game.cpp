@@ -1,4 +1,5 @@
 #include "game.h"
+#include "render_tools.h"
 #include <iostream>
 game_class::game_class()
 {
@@ -7,6 +8,7 @@ game_class::game_class()
     events->set_game(this);
     map=new map_class;
     player=new player_class;
+    physics=new physics_class;
     //std::cout<<player<<"\n";
     running=true;
 }
@@ -20,6 +22,7 @@ SDL_Surface* game_class::get_screen()
 }
 void game_class::render()
 {
+    clear_surface(window->get_screen());
     map->render(window->get_screen());
     player->render(window->get_screen());
     SDL_Flip(window->get_screen());

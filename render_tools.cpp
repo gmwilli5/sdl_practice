@@ -22,3 +22,21 @@ void render_rect(SDL_Rect rect,unsigned int color,SDL_Surface* destination)
 {
     SDL_FillRect(destination,&rect,color);
 }
+void clear_surface(SDL_Surface* surface)
+{
+    SDL_Rect temp;
+    temp.x=0;
+    temp.y=0;
+    temp.w=surface->w;
+    temp.h=surface->h;
+    SDL_FillRect(surface,&temp,0);
+}
+void clear_surface(SDL_Surface* surface,unsigned int color)
+{
+    SDL_Rect temp;
+    temp.x=0;
+    temp.y=0;
+    temp.w=surface->w;
+    temp.h=surface->h;
+    SDL_FillRect(surface,&temp,color);
+}

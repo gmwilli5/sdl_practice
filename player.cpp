@@ -8,6 +8,8 @@ player_class::player_class()
     position.y=0;
     velocity.x=0;
     velocity.y=0;
+    acceleration.x=0;
+    acceleration.y=0;
 }
 /*player_class::player_class(events_class* new_events)
 {
@@ -71,4 +73,8 @@ void player_class::on_screen_check()
     if(position.y>700){
         position.y=0;
     }
+}
+void player_class::update_physics()
+{
+
 }

@@ -6,6 +6,8 @@
 class events_class;
 #include "map.h"
 #include "player.h"
+#include "physics.h"
+class physics_class;
 class player_class;
 class game_class{
     private:
@@ -14,6 +16,7 @@ class game_class{
         events_class* events;
         map_class* map;
         player_class* player;
+        physics_class* physics;
         bool running;
     public:
         game_class();

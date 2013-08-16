@@ -10,9 +10,12 @@ class player_class{
         //events_class* event1;
         vec2 position;
         vec2 velocity;
+        vec2 acceleration;
     private:
         void move();
+        void accelerate();
         void on_screen_check();
+        void update_physics();
     public:
         player_class();
         //player_class(events_class* new_events);
