@@ -12,6 +12,7 @@ player_class::player_class()
     velocity.y=0;
     acceleration.x=0;
     acceleration.y=0;
+    collision=false;
 }
 player_class::~player_class()
 {
@@ -101,4 +102,13 @@ void player_class::accelerate()
 vec2 player_class::get_position()
 {
     return position;
+}
+void player_class::set_collision(bool new_collision)
+{
+    collision=new_collision;
+}
+bool player_class::get_collision()
+{
+    //collision=new_collision;
+    return collision;
 }

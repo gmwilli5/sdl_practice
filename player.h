@@ -13,6 +13,7 @@ class player_class{
         vec2 velocity;
         vec2 acceleration;
         physics_class* physics;
+        bool collision;
     private:
         void move();
         void accelerate();
@@ -25,6 +26,8 @@ class player_class{
         void update();
         void events(SDL_Event event);
         void render(SDL_Surface* screen);
+        void set_collision(bool new_collision);
+        bool get_collision();
         vec2 get_position();
 };
 #endif // PLAYER_H_INCLUDED

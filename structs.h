@@ -9,4 +9,8 @@ struct vec3{
     int y;
     int z;
 };
+struct aabb{
+    vec2 top;
+    vec2 bottom;
+};
 #endif // STRUCTS_H_INCLUDED
