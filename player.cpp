@@ -98,3 +98,7 @@ void player_class::accelerate()
     velocity=dot_product(acceleration,velocity);
     //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
 }
+vec2 player_class::get_position()
+{
+    return position;
+}

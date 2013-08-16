@@ -11,5 +11,6 @@ class map_class{
         map_class();
         SDL_Surface* get_tile();
         void render(SDL_Surface* screen);
+        std::vector<vec3>* get_positions_ptr();
 };
 #endif // MAP_H_INCLUDED

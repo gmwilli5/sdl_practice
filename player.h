@@ -25,5 +25,6 @@ class player_class{
         void update();
         void events(SDL_Event event);
         void render(SDL_Surface* screen);
+        vec2 get_position();
 };
 #endif // PLAYER_H_INCLUDED

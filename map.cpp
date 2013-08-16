@@ -29,3 +29,7 @@ void map_class::render(SDL_Surface* screen)
         apply_surface(positions[iii].x,positions[iii].y,tile,screen);
     }
 }
+std::vector<vec3>* map_class::get_positions_ptr()
+{
+    return &positions;
+}
