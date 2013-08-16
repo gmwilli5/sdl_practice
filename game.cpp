@@ -22,7 +22,7 @@ SDL_Surface* game_class::get_screen()
 }
 void game_class::render()
 {
-    clear_surface(window->get_screen());
+    ///clear_surface(window->get_screen());
     map->render(window->get_screen());
     player->render(window->get_screen());
     SDL_Flip(window->get_screen());

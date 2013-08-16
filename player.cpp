@@ -1,3 +1,4 @@
+#include <iostream>
 #include "player.h"
 #include "tools.h"
 #include "render_tools.h"
@@ -36,7 +37,9 @@ void player_class::update()
 void player_class::move()
 {
     //position+=velocity;
+    //std::cout<<velocity.x<<","<<velocity.y<<"\n";
     position=dot_product(position,velocity);
+    //std::cout<<velocity.x<<","<<velocity.y<<"\n";
 }
 void player_class::events(SDL_Event event)
 {
@@ -84,9 +87,13 @@ void player_class::on_screen_check()
 }
 void player_class::update_physics()
 {
-    physics->apply_gravity(&acceleration.x);
+    //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
+    physics->apply_gravity(&acceleration);
+    //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
 }
 void player_class::accelerate()
 {
-    acceleration=dot_product(acceleration,velocity);
+    //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
+    velocity=dot_product(acceleration,velocity);
+    //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
 }

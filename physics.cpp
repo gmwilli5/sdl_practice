@@ -1,3 +1,4 @@
+#include <iostream>
 #include "physics.h"
 physics_class::physics_class()
 {
@@ -5,9 +6,13 @@ physics_class::physics_class()
 }
 void physics_class::apply_gravity(vec2* apply_too)
 {
-    apply_too->x+=gravity;
+    //std::cout<<apply_too->y<<"\n";
+    apply_too->y+=gravity;
+    //std::cout<<apply_too->y<<"\n";
 }
 void physics_class::apply_gravity(int* apply_too)
 {
-    apply_too+=gravity;
+    //std::cout<<*apply_too<<"\n";
+    *apply_too+=gravity;
+    //std::cout<<*apply_too<<"\n";
 }
