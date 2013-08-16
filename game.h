@@ -7,6 +7,7 @@ class events_class;
 #include "map.h"
 #include "player.h"
 #include "physics.h"
+#include "collision_detection.h"
 class physics_class;
 class player_class;
 class game_class{
@@ -17,6 +18,7 @@ class game_class{
         map_class* map;
         player_class* player;
         physics_class* physics;
+        collision_detection_class* collision_detection;
         bool running;
     public:
         game_class();

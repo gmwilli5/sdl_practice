@@ -9,12 +9,17 @@ game_class::game_class()
     map=new map_class;
     player=new player_class;
     physics=new physics_class;
-    //std::cout<<player<<"\n";
+    collision_detection=new collision_detection_class;
     running=true;
 }
 game_class::~game_class()
 {
     delete window;
+    delete events;
+    delete map;
+    delete player;
+    delete physics;
+    delete collision_detection;
 }
 SDL_Surface* game_class::get_screen()
 {
@@ -22,7 +27,7 @@ SDL_Surface* game_class::get_screen()
 }
 void game_class::render()
 {
-    ///clear_surface(window->get_screen());
+    clear_surface(window->get_screen());
     map->render(window->get_screen());
     player->render(window->get_screen());
     SDL_Flip(window->get_screen());

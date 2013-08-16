@@ -6,7 +6,7 @@
 class map_class{
     private:
         SDL_Surface* tile;
-        std::vector<vec2> positions;
+        std::vector<vec3> positions;
     public:
         map_class();
         SDL_Surface* get_tile();
