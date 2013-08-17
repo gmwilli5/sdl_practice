@@ -3,6 +3,7 @@
 #include "SDL/SDL.h"
 #include "structs.h"
 #include "events.h"
+#include "collision_queue.h"
 class events_class;
 class physics_class;
 class player_class{
@@ -13,6 +14,7 @@ class player_class{
         vec2 velocity;
         vec2 acceleration;
         physics_class* physics;
+        collision_queue_class* collisions;
         bool collision;
     private:
         void move();
@@ -27,7 +29,9 @@ class player_class{
         void events(SDL_Event event);
         void render(SDL_Surface* screen);
         void set_collision(bool new_collision);
+        void add_collision(collision_class new_collision);
         bool get_collision();
         vec2 get_position();
+        unsigned int get_collision_size();
 };
 #endif // PLAYER_H_INCLUDED

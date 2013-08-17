@@ -15,7 +15,7 @@ void collision_class::set_map(vec3 new_map)
 {
     map_tile=new_map;
 }
-void collision_class::set_map(vec2 new_player)
+void collision_class::set_player(vec2 new_player)
 {
     player_tile=new_player;
 }

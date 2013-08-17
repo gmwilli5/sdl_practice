@@ -10,7 +10,7 @@ class collision_class{
         collision_class();
         collision_class(vec3 new_map_tile,vec2 new_player_tile, vec2 new_momentum);
         void set_map(vec3 new_map);
-        void set_map(vec2 new_player);
+        void set_player(vec2 new_player);
         void set_momentum(vec2 new_momentum);
 };
 #endif // COLLISION_H_INCLUDED

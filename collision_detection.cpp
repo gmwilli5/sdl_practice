@@ -30,11 +30,18 @@ void collision_detection_class::detect_collisions()
             aabb map_tile=construct_aabb(tiles->at(iii),30,20);
             if((detect_collision(map_tile,player_tile))==true){
                 player->set_collision(true);
+                collision_class temp;
+                temp.set_map(tiles->at(iii));
+                temp.set_momentum({0,0});
+                temp.set_player(temp_p);
+                player->add_collision(temp);
             }
         }
     }
 }
 void collision_detection_class::resolve_collisions()
 {
+    for(unsigned int iii=0;iii<player->get_collision_size();iii++){
 
+    }
 }

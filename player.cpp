@@ -13,11 +13,13 @@ player_class::player_class()
     acceleration.x=0;
     acceleration.y=0;
     collision=false;
+    collisions=new collision_queue_class;
 }
 player_class::~player_class()
 {
     SDL_FreeSurface(tile);
     delete physics;
+    delete collisions;
 }
 /*player_class::player_class(events_class* new_events)
 {
@@ -111,4 +113,12 @@ bool player_class::get_collision()
 {
     //collision=new_collision;
     return collision;
+}
+void player_class::add_collision(collision_class new_collision)
+{
+    collisions->push(new_collision);
+}
+unsigned int player_class::get_collision_size()
+{
+    return collisions->size();
 }
