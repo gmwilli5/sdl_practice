@@ -47,6 +47,14 @@ bool aabb_vs_aabb(aabb a, aabb b)
         //if(a.)
         return true;
     }
+    if(b.top.x<=a.bottom.x&&b.top.x>a.top.x&&b.top.y>=a.top.y&&b.top.y<=a.bottom.y){
+        //if(a.)
+        return true;
+    }
+    if(b.bottom.x<=a.bottom.x&&b.bottom.x>a.top.x&&b.bottom.y>=a.top.y&&b.bottom.y<=a.bottom.y){
+        //if(a.)
+        return true;
+    }
     return false;
 }
 bool vec2_vs_vec3(vec2 vec_a,vec3 vec_b)

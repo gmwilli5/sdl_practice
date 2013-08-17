@@ -50,4 +50,5 @@ void game_class::update()
 {
     player->update();
     collision_detection->update();
+    //physics->update();
 }

@@ -34,7 +34,7 @@ void player_class::update()
 {
     on_screen_check();
     ///does the physics won't be neccassarry until some sort of map is implemented
-    ///update_physics();
+    update_physics();
     ///accelerate();
     move();
 }

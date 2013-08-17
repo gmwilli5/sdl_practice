@@ -51,7 +51,7 @@ void collision_detection_class::resolve_collisions()
         temp=player->pop_collision();
         vec2 temp_v;
         temp_v=temp.get_player();
-        temp_v.y=temp.get_map().y+20;
+        temp_v.y=temp.get_map().y-20;
         player->set_position(temp_v);
         player->stop_movement();
     }
