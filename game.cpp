@@ -10,6 +10,8 @@ game_class::game_class()
     player=new player_class;
     physics=new physics_class;
     collision_detection=new collision_detection_class;
+    collision_detection->set_map(map);
+    collision_detection->set_player(player);
     running=true;
 }
 game_class::~game_class()
@@ -47,4 +49,5 @@ player_class* game_class::get_player()
 void game_class::update()
 {
     player->update();
+    collision_detection->update();
 }

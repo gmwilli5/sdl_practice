@@ -23,3 +23,11 @@ void collision_class::set_momentum(vec2 new_momentum)
 {
     momentum=new_momentum;
 }
+vec2 collision_class::get_player()
+{
+    return player_tile;
+}
+vec3 collision_class::get_map()
+{
+    return map_tile;
+}

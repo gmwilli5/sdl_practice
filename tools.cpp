@@ -79,3 +79,8 @@ bool detect_collision(vec2 a,vec2 b)
 {
     return vec2_vs_vec2(a,b);
 }
+void zero_vec2(vec2& a)
+{
+    a.x=0;
+    a.y=0;
+}

@@ -33,5 +33,10 @@ class player_class{
         bool get_collision();
         vec2 get_position();
         unsigned int get_collision_size();
+        collision_class pop_collision();
+        void set_position(vec2 new_position);
+        void set_velocity(vec2 new_velocity);
+        void set_acceleration(vec2 new_acceleration);
+        void stop_movement();
 };
 #endif // PLAYER_H_INCLUDED

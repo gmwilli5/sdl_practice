@@ -122,3 +122,25 @@ unsigned int player_class::get_collision_size()
 {
     return collisions->size();
 }
+collision_class player_class::pop_collision()
+{
+    collision_class temp=collisions->pop();
+    return temp;
+}
+void player_class::set_position(vec2 new_position)
+{
+    position=new_position;
+}
+void player_class::set_velocity(vec2 new_velocity)
+{
+    velocity=new_velocity;
+}
+void player_class::set_acceleration(vec2 new_acceleration)
+{
+    acceleration=new_acceleration;
+}
+void player_class::stop_movement()
+{
+    zero_vec2(velocity);
+    zero_vec2(acceleration);
+}
