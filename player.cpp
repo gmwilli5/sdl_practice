@@ -34,8 +34,8 @@ void player_class::update()
 {
     on_screen_check();
     ///does the physics won't be neccassarry until some sort of map is implemented
-    update_physics();
-    ///accelerate();
+    ///*update_physics();
+    ///accelerate();*/
     move();
 }
 void player_class::move()
@@ -141,6 +141,8 @@ void player_class::set_acceleration(vec2 new_acceleration)
 }
 void player_class::stop_movement()
 {
-    zero_vec2(velocity);
-    zero_vec2(acceleration);
+    //zero_vec2(velocity);
+    zero_vec2_y(velocity);
+    //zero_vec2(acceleration);
+    zero_vec2_y(acceleration);
 }

@@ -92,3 +92,7 @@ void zero_vec2(vec2& a)
     a.x=0;
     a.y=0;
 }
+void zero_vec2_y(vec2& a)
+{
+    a.y=0;
+}
