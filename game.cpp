@@ -15,6 +15,7 @@ game_class::game_class()
     collision_detection->set_player(player);
     running=true;
     camera=new camera_class;
+    camera->set_map(map);
 }
 game_class::~game_class()
 {
@@ -54,4 +55,8 @@ void game_class::update()
     player->update();
     collision_detection->update();
     //physics->update();
+}
+camera_class* game_class::get_camera()
+{
+    return camera;
 }

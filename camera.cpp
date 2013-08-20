@@ -53,9 +53,24 @@ void camera_class::calculate_indexes()
 }
 void camera_class::move_left()
 {
-
+    map->shift_left(30);
 }
 void camera_class::move_right()
 {
-
+    map->shift_right(30);
+}
+void camera_class::events(SDL_Event event)
+{
+    if(event.type==SDL_KEYDOWN){
+        switch(event.key.keysym.sym){
+            case SDLK_a:
+                move_left();
+                break;
+            case SDLK_d:
+                move_right();
+                break;
+            default:
+                break;
+        }
+    }
 }

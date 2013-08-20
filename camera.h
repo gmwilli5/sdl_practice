@@ -2,6 +2,7 @@
 #define CAMERA_H_INCLUDED
 #include <vector>
 #include "structs.h"
+#include "SDL/SDL.h"
 class map_class;
 class player_class;
 class camera_class{
@@ -26,6 +27,7 @@ class camera_class{
         unsigned int get_index(unsigned int index);
         void move_left();
         void move_right();
+        void events(SDL_Event event);
         //void calculate_indexes();
 };
 #endif // CAMERA_H_INCLUDED

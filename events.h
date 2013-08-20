@@ -12,5 +12,6 @@ class events_class{
         events_class();
         void set_game(game_class* new_game);
         void event_loop();
+        ///void set_camera(camera_class* new_camera);
 };
 #endif // EVENTS_H_INCLUDED
