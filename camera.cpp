@@ -74,3 +74,11 @@ void camera_class::events(SDL_Event event)
         }
     }
 }
+void camera_class::move_up()
+{
+    map->shift_up(30);
+}
+void camera_class::move_down()
+{
+    map->shift_down(30);
+}

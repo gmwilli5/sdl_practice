@@ -27,6 +27,8 @@ class camera_class{
         unsigned int get_index(unsigned int index);
         void move_left();
         void move_right();
+        void move_up();
+        void move_down();
         void events(SDL_Event event);
         //void calculate_indexes();
 };

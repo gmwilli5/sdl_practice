@@ -50,3 +50,15 @@ void map_class::shift_right(int pixels)
         positions.at(iii).x+=pixels;
     }
 }
+void map_class::shift_up(int pixels)
+{
+    for(unsigned int iii=0;iii<positions.size();iii++){
+        positions.at(iii).y-=pixels;
+    }
+}
+void map_class::shift_down(int pixels)
+{
+    for(unsigned int iii=0;iii<positions.size();iii++){
+        positions.at(iii).y+=pixels;
+    }
+}

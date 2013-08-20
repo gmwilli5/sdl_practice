@@ -17,5 +17,7 @@ class map_class{
         void set_camera(camera_class* new_camera);
         void shift_left(int pixels);
         void shift_right(int pixels);
+        void shift_up(int pixels);
+        void shift_down(int pixels);
 };
 #endif // MAP_H_INCLUDED
