@@ -34,3 +34,7 @@ std::vector<vec3>* map_class::get_positions_ptr()
 {
     return &positions;
 }
+void map_class::set_camera(camera_class* new_camera)
+{
+    camera=new_camera;
+}
