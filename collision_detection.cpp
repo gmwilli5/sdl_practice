@@ -33,7 +33,7 @@ void collision_detection_class::detect_collisions()
             //std::cout<<33<<"\n";
             aabb map_tile=construct_aabb(tiles->at(iii),30,20);
             if((detect_collision(map_tile,player_tile))==true){
-                //std::cout<<36<<"\n";
+                std::cout<<36<<"\n";
                 player->set_collision(true);
                 //collision_class temp;
                 temp.set_map(tiles->at(iii));
