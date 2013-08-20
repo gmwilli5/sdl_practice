@@ -38,3 +38,15 @@ void map_class::set_camera(camera_class* new_camera)
 {
     camera=new_camera;
 }
+void map_class::shift_left(int pixels)
+{
+    for(unsigned int iii=0;iii<positions.size();iii++){
+        positions.at(iii).x-=pixels;
+    }
+}
+void map_class::shift_right(int pixels)
+{
+    for(unsigned int iii=0;iii<positions.size();iii++){
+        positions.at(iii).x+=pixels;
+    }
+}

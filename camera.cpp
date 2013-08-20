@@ -47,3 +47,15 @@ unsigned int camera_class::get_index(unsigned int index)
 {
     return indexes.at(index);
 }
+void camera_class::calculate_indexes()
+{
+
+}
+void camera_class::move_left()
+{
+
+}
+void camera_class::move_right()
+{
+
+}

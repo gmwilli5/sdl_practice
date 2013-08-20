@@ -11,6 +11,8 @@ class camera_class{
         map_class* map;
         ///holds indexes of the map tiles currently being rendered
         std::vector<unsigned int> indexes;
+    private:
+        void calculate_indexes();
     public:
         camera_class();
         void set_map(map_class* new_map);
@@ -22,5 +24,8 @@ class camera_class{
         void set_indexes(std::vector<unsigned int>* new_indexes);
         void add_index(unsigned int index);
         unsigned int get_index(unsigned int index);
+        void move_left();
+        void move_right();
+        //void calculate_indexes();
 };
 #endif // CAMERA_H_INCLUDED

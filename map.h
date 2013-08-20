@@ -15,5 +15,7 @@ class map_class{
         void render(SDL_Surface* screen);
         std::vector<vec3>* get_positions_ptr();
         void set_camera(camera_class* new_camera);
+        void shift_left(int pixels);
+        void shift_right(int pixels);
 };
 #endif // MAP_H_INCLUDED
