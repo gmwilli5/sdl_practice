@@ -20,5 +20,7 @@ class camera_class{
         std::vector<unsigned int>* get_indexes_ptr();
         void set_indexes(std::vector<unsigned int> new_indexes);
         void set_indexes(std::vector<unsigned int>* new_indexes);
+        void add_index(unsigned int index);
+        unsigned int get_index(unsigned int index);
 };
 #endif // CAMERA_H_INCLUDED

@@ -39,3 +39,11 @@ void camera_class::set_indexes(std::vector<unsigned int>* new_indexes)
         indexes.push_back(new_indexes->at(iii));
     }
 }
+void camera_class::add_index(unsigned int index)
+{
+    indexes.push_back(index);
+}
+unsigned int camera_class::get_index(unsigned int index)
+{
+    return indexes.at(index);
+}
