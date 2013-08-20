@@ -32,8 +32,9 @@ void collision_detection_class::detect_collisions()
         if(tiles->at(iii).z==1){
             //std::cout<<33<<"\n";
             aabb map_tile=construct_aabb(tiles->at(iii),30,20);
-            if((detect_collision(map_tile,player_tile))==true){
-                std::cout<<36<<"\n";
+            //if(((detect_collision(map_tile,player_tile))==true)&&(player->get_disable_collision()==false)){
+            if(((detect_collision(map_tile,player_tile))==true)){
+                //std::cout<<36<<"\n";
                 player->set_collision(true);
                 //collision_class temp;
                 temp.set_map(tiles->at(iii));
@@ -55,6 +56,11 @@ void collision_detection_class::resolve_collisions()
             temp_v.y=temp.get_map().y-21;
             player->set_position(temp_v);
             player->stop_movement();
+            if(player->get_disable_collision()==true){
+                temp_v.y=temp_v.y+42;
+                player->set_position(temp_v);
+                player->set_disable_collision(false);
+            }
         }
         if(temp_v.y>temp.get_map().y){
             temp_v.y=temp.get_map().y+21;

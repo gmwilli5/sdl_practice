@@ -16,6 +16,7 @@ class player_class{
         physics_class* physics;
         collision_queue_class* collisions;
         bool collision;
+        bool disable_collision;
     private:
         void move();
         void accelerate();
@@ -38,5 +39,7 @@ class player_class{
         void set_velocity(vec2 new_velocity);
         void set_acceleration(vec2 new_acceleration);
         void stop_movement();
+        void set_disable_collision(bool new_bool);
+        bool get_disable_collision();
 };
 #endif // PLAYER_H_INCLUDED

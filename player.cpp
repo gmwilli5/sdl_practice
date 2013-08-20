@@ -14,6 +14,7 @@ player_class::player_class()
     acceleration.y=0;
     collision=false;
     collisions=new collision_queue_class;
+    disable_collision=false;
 }
 player_class::~player_class()
 {
@@ -64,6 +65,10 @@ void player_class::events(SDL_Event event)
             case SDLK_RIGHT:
                 velocity.x+=1;
                 //game->get_player()->events(event);
+                break;
+            case SDLK_l:
+                //game->get_player()->events(event);
+                disable_collision=true;
                 break;
             default:
                 break;
@@ -145,4 +150,12 @@ void player_class::stop_movement()
     zero_vec2_y(velocity);
     //zero_vec2(acceleration);
     zero_vec2_y(acceleration);
+}
+void player_class::set_disable_collision(bool new_bool)
+{
+    disable_collision=new_bool;
+}
+bool player_class::get_disable_collision()
+{
+    return disable_collision;
 }

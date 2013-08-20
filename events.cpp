@@ -28,6 +28,9 @@ void events_class::events(SDL_Event* e)
             case SDLK_RIGHT:
                 game->get_player()->events(event);
                 break;
+            case SDLK_l:
+                game->get_player()->events(event);
+                break;
             default:
                 break;
         }
