@@ -10,6 +10,7 @@ class events_class;
 #include "collision_detection.h"
 class physics_class;
 class player_class;
+class camera_class;
 class game_class{
     private:
         SDL_Surface* screen;
@@ -19,6 +20,7 @@ class game_class{
         player_class* player;
         physics_class* physics;
         collision_detection_class* collision_detection;
+        camera_class* camera;
         bool running;
     public:
         game_class();

@@ -1,5 +1,6 @@
 #include "game.h"
 #include "render_tools.h"
+#include "camera.h"
 #include <iostream>
 game_class::game_class()
 {
@@ -13,6 +14,7 @@ game_class::game_class()
     collision_detection->set_map(map);
     collision_detection->set_player(player);
     running=true;
+    camera=new camera_class;
 }
 game_class::~game_class()
 {
@@ -22,6 +24,7 @@ game_class::~game_class()
     delete player;
     delete physics;
     delete collision_detection;
+    delete camera;
 }
 SDL_Surface* game_class::get_screen()
 {

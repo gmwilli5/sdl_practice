@@ -66,6 +66,11 @@ void collision_detection_class::resolve_collisions()
             temp_v.y=temp.get_map().y+21;
             player->set_position(temp_v);
             player->stop_movement();
+            if(player->get_disable_collision()==true){
+                temp_v.y=temp_v.y-42;
+                player->set_position(temp_v);
+                player->set_disable_collision(false);
+            }
         }
     }
 }
