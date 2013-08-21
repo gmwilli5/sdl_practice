@@ -31,3 +31,11 @@ vec3 collision_class::get_map()
 {
     return map_tile;
 }
+void collision_class::set_vertical(bool new_vertical)
+{
+    vertical=new_vertical;
+}
+bool collision_class::get_vertical()
+{
+    return vertical;
+}

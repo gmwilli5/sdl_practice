@@ -111,5 +111,15 @@ aabb_3 construct_aabb_3(player_class* player)
 }
 bool vertical_collision_check(aabb_3 a, aabb b)
 {
-    return false;
+    //return false;
+    if(a.movement.x==0){
+        return true;
+    }
+    if(a.movement.y==0){
+        return false;
+    }
+    if(a.top.y>=b.top.y-20&&a.top.y<=b.top.y+20){
+        return false;
+    }
+    return true;
 }

@@ -40,11 +40,14 @@ void collision_detection_class::detect_collisions()
                 temp.set_map(tiles->at(iii));
                 temp.set_momentum({0,0});
                 temp.set_player(temp_p);
+                //temp.set_vertical(vertical_collision_check(construct_aabb_3(player),tiles->at(iii)));
+                temp.set_vertical(vertical_collision_check(construct_aabb_3(player),construct_aabb((tiles->at(iii)),30,20));
                 player->add_collision(temp);
             }
         }
     }
 }
+///home/georgewilliams/cpp/sdl_practice/collision_detection.cpp|44|error: could not convert ‘construct_aabb(tiles->std::vector<_Tp, _Alloc>::at [with _Tp = vec3, _Alloc = std::allocator<vec3>, std::vector<_Tp, _Alloc>::reference = vec3&, std::vector<_Tp, _Alloc>::size_type = long unsigned int](((long unsigned int)iii)), 30, 20)’ from ‘aabb’ to ‘aabb_3’|
 void collision_detection_class::resolve_collisions()
 {
     collision_class temp;
