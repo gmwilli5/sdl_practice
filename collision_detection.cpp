@@ -41,7 +41,10 @@ void collision_detection_class::detect_collisions()
                 temp.set_momentum({0,0});
                 temp.set_player(temp_p);
                 //temp.set_vertical(vertical_collision_check(construct_aabb_3(player),tiles->at(iii)));
-                temp.set_vertical(vertical_collision_check(construct_aabb_3(player),construct_aabb((tiles->at(iii)),30,20));
+                ///temp.set_vertical(vertical_collision_check(construct_aabb_3(player),construct_aabb_3((tiles->at(iii)),30,20));
+                aabb_3 temp3;
+                aabb temp1;
+                ///temp.set_vertical(vertical_collision_check(temp3,temp1);
                 player->add_collision(temp);
             }
         }
