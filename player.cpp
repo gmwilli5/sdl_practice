@@ -159,3 +159,7 @@ bool player_class::get_disable_collision()
 {
     return disable_collision;
 }
+vec2 player_class::get_velocity()
+{
+    return velocity;
+}

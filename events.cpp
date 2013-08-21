@@ -40,6 +40,14 @@ void events_class::events(SDL_Event* e)
                 game->get_camera()->events(event);
                 //move_right();
                 break;
+            case SDLK_s:
+                //move_left();
+                game->get_camera()->events(event);
+                break;
+            case SDLK_w:
+                game->get_camera()->events(event);
+                //move_right();
+                break;
             default:
                 break;
         }

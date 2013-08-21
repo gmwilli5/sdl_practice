@@ -13,4 +13,9 @@ struct aabb{
     vec2 top;
     vec2 bottom;
 };
+struct aabb_3{
+    vec2 top;
+    vec2 bottom;
+    vec2 movement;
+};
 #endif // STRUCTS_H_INCLUDED

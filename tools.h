@@ -13,4 +13,6 @@ bool detect_collision(vec2 a,vec3 b);
 bool detect_collision(vec2 a,vec2 b);
 void zero_vec2(vec2& a);
 void zero_vec2_y(vec2& a);
+bool vertical_collision_check(aabb_3 a, aabb_3 b);
+aabb_3 construct_aabb_3(player_class* player);
 #endif // TOOLS_H_INCLUDED

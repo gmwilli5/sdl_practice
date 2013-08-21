@@ -69,6 +69,12 @@ void camera_class::events(SDL_Event event)
             case SDLK_d:
                 move_right();
                 break;
+            case SDLK_s:
+                move_down();
+                break;
+            case SDLK_w:
+                move_up();
+                break;
             default:
                 break;
         }

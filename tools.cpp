@@ -1,4 +1,6 @@
 #include "structs.h"
+#include "player.h"
+class player_class;
 vec2 operator+(vec2 a,vec2 b)
 {
     vec2 temp;
@@ -95,4 +97,19 @@ void zero_vec2(vec2& a)
 void zero_vec2_y(vec2& a)
 {
     a.y=0;
+}
+aabb_3 construct_aabb_3(player_class* player)
+{
+    aabb_3 temp;
+    temp.top=player->get_position();
+    vec2 temp_v={0,0};
+    temp_v.x=temp.top.x+30;
+    temp_v.y=temp.top.y+20;
+    temp.bottom=temp_v;
+    temp.movement=player->get_velocity();
+    return temp;
+}
+bool vertical_collision_check(aabb_3 a, aabb b)
+{
+    return false;
 }

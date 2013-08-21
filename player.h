@@ -41,5 +41,6 @@ class player_class{
         void stop_movement();
         void set_disable_collision(bool new_bool);
         bool get_disable_collision();
+        vec2 get_velocity();
 };
 #endif // PLAYER_H_INCLUDED
