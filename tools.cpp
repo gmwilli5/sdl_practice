@@ -1,5 +1,6 @@
 #include "structs.h"
 #include "player.h"
+#include <iostream>
 class player_class;
 vec2 operator+(vec2 a,vec2 b)
 {
@@ -113,12 +114,15 @@ bool vertical_collision_check(aabb_3 a, aabb b)
 {
     //return false;
     if(a.movement.x==0){
+        std::cout<<117<<"\n";
         return true;
     }
     if(a.movement.y==0){
+        std::cout<<119<<"\n";
         return false;
     }
     if(a.top.y>=b.top.y-20&&a.top.y<=b.top.y+20){
+        std::cout<<123<<"\n";
         return false;
     }
     return true;

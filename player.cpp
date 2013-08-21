@@ -151,6 +151,11 @@ void player_class::stop_movement()
     //zero_vec2(acceleration);
     zero_vec2_y(acceleration);
 }
+void player_class::stop_x_movement()
+{
+    velocity.x=0;
+    acceleration.x=0;
+}
 void player_class::set_disable_collision(bool new_bool)
 {
     disable_collision=new_bool;

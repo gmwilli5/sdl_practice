@@ -81,6 +81,9 @@ void collision_detection_class::resolve_collisions()
                 }
             }
         }
+        if(temp.get_vertical()==false){
+            player->stop_x_movement();
+        }
     }
 }
 void collision_detection_class::update()
