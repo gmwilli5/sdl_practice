@@ -125,5 +125,20 @@ bool vertical_collision_check(aabb_3 a, aabb b)
         std::cout<<123<<"\n";
         return false;
     }
+    std::cout<<128<<"\n";
     return true;
+}
+bool operator>=(vec2 a,int b)
+{
+    if(a.x>=b&&a.y>=b){
+        return true;
+    }
+    return false;
+}
+bool operator<=(vec2 a,int b)
+{
+    if(a.x<=b&&a.y<=b){
+        return true;
+    }
+    return false;
 }

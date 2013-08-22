@@ -51,7 +51,6 @@ void collision_detection_class::detect_collisions()
         }
     }
 }
-///home/georgewilliams/cpp/sdl_practice/collision_detection.cpp|44|error: could not convert ‘construct_aabb(tiles->std::vector<_Tp, _Alloc>::at [with _Tp = vec3, _Alloc = std::allocator<vec3>, std::vector<_Tp, _Alloc>::reference = vec3&, std::vector<_Tp, _Alloc>::size_type = long unsigned int](((long unsigned int)iii)), 30, 20)’ from ‘aabb’ to ‘aabb_3’|
 void collision_detection_class::resolve_collisions()
 {
     collision_class temp;
@@ -59,7 +58,7 @@ void collision_detection_class::resolve_collisions()
         temp=player->pop_collision();
         vec2 temp_v;
         temp_v=temp.get_player();
-        if(temp.get_vertical()==true){
+        //if(temp.get_vertical()==true){
             if(temp_v.y<temp.get_map().y){
             temp_v.y=temp.get_map().y-21;
             player->set_position(temp_v);
@@ -80,10 +79,11 @@ void collision_detection_class::resolve_collisions()
                     player->set_disable_collision(false);
                 }
             }
-        }
+        /*}
         if(temp.get_vertical()==false){
+            std::cout<<84<<"\n";
             player->stop_x_movement();
-        }
+        }*/
     }
 }
 void collision_detection_class::update()

@@ -15,4 +15,6 @@ void zero_vec2(vec2& a);
 void zero_vec2_y(vec2& a);
 bool vertical_collision_check(aabb_3 a, aabb b);
 aabb_3 construct_aabb_3(player_class* player);
+bool operator>=(vec2 a,int b);
+bool operator<=(vec2 a,int b);
 #endif // TOOLS_H_INCLUDED

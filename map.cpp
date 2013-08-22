@@ -12,7 +12,7 @@ map_class::map_class()
             positions.push_back(temp);
         }
     }*/
-    for(int iii=0;iii<700;iii+=400){
+    for(int iii=0;iii<7000;iii+=400){
         temp.x=iii;
         temp.y=650;
         temp.z=1;

@@ -35,8 +35,8 @@ void player_class::update()
 {
     on_screen_check();
     ///does the physics won't be neccassarry until some sort of map is implemented
-    ///*update_physics();
-    ///accelerate();*/
+    update_physics();
+    accelerate();
     move();
 }
 void player_class::move()
@@ -51,19 +51,19 @@ void player_class::events(SDL_Event event)
     if(event.type==SDL_KEYDOWN){
         switch(event.key.keysym.sym){
             case SDLK_UP:
-                velocity.y-=1;
+                velocity.y-=50;
                 //game->get_player()->events(event);
                 break;
             case SDLK_DOWN:
-                velocity.y+=1;
+                velocity.y+=50;
                 //game->get_player()->events(event);
                 break;
             case SDLK_LEFT:
-                velocity.x-=1;
+                velocity.x-=5;
                 //game->get_player()->events(event);
                 break;
             case SDLK_RIGHT:
-                velocity.x+=1;
+                velocity.x+=5;
                 //game->get_player()->events(event);
                 break;
             case SDLK_l:
@@ -97,7 +97,9 @@ void player_class::on_screen_check()
 void player_class::update_physics()
 {
     //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
-    physics->apply_gravity(&acceleration);
+    if(acceleration<=10){
+        physics->apply_gravity(&acceleration);
+    }
     //std::cout<<acceleration.x<<","<<acceleration.y<<"\n";
 }
 void player_class::accelerate()
